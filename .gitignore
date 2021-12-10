@@ -1,2 +1,7 @@
-/node_modules
-
+node_modules
+build/
+remote-repo/
+.module-cache
+*.log*
+chrome-user-data
+.vscode
