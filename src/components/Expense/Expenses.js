@@ -1,11 +1,19 @@
-import { ExpenseItem } from "./ExpenseItem";
 import Card from "../UI/Card";
-
 import "./Expenses.css";
+import ExpensesFilter from "../ExpenseFilter/ExpenseFilter";
+import { ExpenseItem } from "./ExpenseItem";
+import { useState } from "react";
 
 function Expenses({ items }) {
+  const [option, setOption] = useState("");
+
+  const dataHandler = (selectedOption) => {
+    setOption(selectedOption);
+  };
+
   return (
     <Card className="expenses">
+      <ExpensesFilter onSelectedOption={dataHandler} />
       <ExpenseItem
         title={items[0].title}
         amount={items[0].amount}
