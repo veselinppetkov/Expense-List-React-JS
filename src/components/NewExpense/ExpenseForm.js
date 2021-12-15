@@ -1,19 +1,19 @@
 import "./ExpenseForm.css";
 import { useState } from "react";
 
-const ExpenseForm = () => {
+const ExpenseForm = ({ exportInputData }) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
   const titleClickHandler = (e) => {
-    setEnteredTitle(e.target.value.trim());
+    setEnteredTitle(e.target.value);
   };
   const amountClickHandler = (e) => {
-    setEnteredAmount(e.target.value.trim());
+    setEnteredAmount(e.target.value);
   };
   const dateClickHandler = (e) => {
-    setEnteredDate(e.target.value.trim());
+    setEnteredDate(e.target.value);
   };
 
   const submitHandler = (e) => {
@@ -25,7 +25,7 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    console.log(inputData);
+    exportInputData(inputData);
 
     setEnteredDate("");
     setEnteredAmount("");

@@ -24,9 +24,14 @@ function App() {
     },
   ];
 
+  const exportData = (exportedData) => {
+    console.log(`Data has successfuly transmitted!`);
+    console.log(exportedData);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense exportData={exportData} />
       <Expenses items={expenses} />
     </div>
   );
