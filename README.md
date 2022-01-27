@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# Getting Started with Create React App [![image](https://img.shields.io/badge/Udemy-EC5252?style=for-the-badge&logo=Udemy&logoColor=white)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
